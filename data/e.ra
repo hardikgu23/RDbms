@@ -1,0 +1,10 @@
+LOAD Student
+LOAD Advisor
+LOAD Marks
+cross_q5 <- CROSS Student Marks
+q51 <- SELECT Student_Stud_Id == Marks_Stud_Id FROM cross_q5
+q52 <- SELECT Stud_sex == 1 FROM q51
+q53 <- SELECT Advisor_id == 1 FROM q52
+q54 <- SELECT Maths_marks > 70 FROM q53
+q55 <- PROJECT Student_Stud_Id ,Maths_marks FROM q54
+PRINT q55

@@ -1,0 +1,7 @@
+LOAD Student
+LOAD Advisor
+cross_q3 <- CROSS Student Advisor
+q31 <- SELECT Advisor_id == Adv_Id FROM cross_q3
+q32 <- SELECT Stud_sex != Adv_sex FROM q31
+q33 <- PROJECT Stud_Id , Adv_Id , Stud_sex , Adv_sex FROM q32
+PRINT q33

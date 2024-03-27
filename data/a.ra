@@ -1,0 +1,4 @@
+LOAD Student
+Q1 <- SELECT Stud_sex == 0 FROM Student
+Q11 <- PROJECT Stud_Id, Stud_age FROM Q1
+PRINT Q11
